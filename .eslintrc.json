@@ -4,14 +4,25 @@
         "commonjs": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "airbnb-base",
+        "prettier"
+    ],
+    "plugins":[
+        "prettier"
+    ],
     "globals": {
         "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "SharedArrayBuffer": "readonly",
+        "use": "readonly"
     },
     "parserOptions": {
         "ecmaVersion": 2018
     },
     "rules": {
+        "prettier/prettier": "error",
+        "class-methods-use-this": "off",
+        "consistent-return": "off",
+        "no-param-reassign": "off"
     }
 }
